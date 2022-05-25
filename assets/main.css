@@ -128,7 +128,7 @@ table td { border: 1px solid #e8e8e8; }
 
 .post-meta { font-size: 14px; color: #828282; }
 
-.post-link { display: block; font-size: 24px; }
+.post-link { display: block; font-size: 20.8px; }
 
 /** Posts */
 .post-header { margin-bottom: 30px; }
@@ -162,7 +162,7 @@ table td { border: 1px solid #e8e8e8; }
 
 .publication-info { font-size: 14px; color: #828282; margin-bottom: 5pt; }
 
-.publication-authors { font-size: 16.4px; color: #565656ff; margin-top: -8pt; margin-bottom: 5pt; }
+.publication-authors { font-size: 14.4px; color: #565656ff; margin-top: -8pt; margin-bottom: 5pt; }
 
 .publication-link { display: block; font-size: 24px; }
 
