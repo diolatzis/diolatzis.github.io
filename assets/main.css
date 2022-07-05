@@ -179,7 +179,7 @@ table td { border: 1px solid #e8e8e8; }
 
 .logo { margin-top: 17pt; margin-left: 200pt; margin-bottom: 15pt; border-radius: 0%; -webkit-border-radius: 0%; -moz-border-radius: 0%; max-width: 220px; width: 100%; }
 
-.scrollable-sec { overflow-x: hidden; overflow-y: scroll; width: 100%; height: 600px; padding-right: 10px; border: 1px solid #c2c2c2; box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.9); }
+.scrollable-sec { overflow-x: hidden; overflow-y: scroll; width: 100%; height: 600px; padding-right: 10px; box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.9); }
 
 .scrollable-sec::-webkit-scrollbar { width: 6px; height: 6px; }
 
