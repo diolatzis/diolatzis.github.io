@@ -128,7 +128,7 @@ table td { border: 1px solid #e8e8e8; }
 
 .post-meta { font-size: 14px; color: #828282; }
 
-.post-link { display: block; font-size: 24px; }
+.post-link { display: block; font-size: 25.6px; }
 
 /** Posts */
 .post-header { margin-bottom: 30px; }
@@ -154,7 +154,7 @@ table td { border: 1px solid #e8e8e8; }
 .post-img { object-fit: cover; height: 400px; width: 100%; float: center; }
 
 /** Publications */
-.publication { margin-bottom: 60pt; }
+.publication { margin-bottom: 60pt; text-align: start; }
 
 .publication-preview { object-fit: cover; width: 160px; height: 160px; float: left; margin-right: 15pt; border: 1px solid #bababa; border-radius: 7%; -webkit-border-radius: 7%; -moz-border-radius: 7%; }
 
@@ -162,17 +162,17 @@ table td { border: 1px solid #e8e8e8; }
 
 @media screen and (max-width: 800px) { .publication-title { font-size: 36px; } }
 
-.publication-info { font-size: 14px; color: #828282; margin-bottom: 5pt; }
+.publication-info { font-size: 17.6px; color: #828282; margin-bottom: 5pt; }
 
-.publication-authors { font-size: 14.4px; color: #565656ff; margin-top: -8pt; margin-bottom: 5pt; }
+.publication-authors { font-size: 16px; color: #565656ff; margin-top: -8pt; margin-bottom: 5pt; }
 
 .publication-link { display: block; font-size: 24px; }
 
 .publication-asset { margin-left: 10pt; }
 
-.publication-icon { width: 16pt; height: 16pt; display: inline-block; fill: #828282; padding: 1pt; vertical-align: text-top; }
+.publication-icon { width: 16pt; height: 16pt; display: inline-block; fill: #828282; padding: 1pt; vertical-align: middle; }
 
-.publication-icon-title { margin-right: 5pt; }
+.publication-icon-title { margin-right: 5pt; font-size: 17.6px; vertical-align: middle; }
 
 /** Custom elements */
 .avatar { margin-top: 15pt; margin-bottom: 15pt; border-radius: 100%; -webkit-border-radius: 100%; -moz-border-radius: 100%; max-width: 120px; width: 100%; }
