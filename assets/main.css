@@ -153,7 +153,7 @@ table td { border: 1px solid #e8e8e8; }
 
 @media screen and (max-width: 800px) { .post-content h4 { font-size: 18px; } }
 
-.post-img { object-fit: cover; height: 400px; width: 100%; float: center; }
+.post-img { object-fit: cover; height: 400pt; width: 100%; float: center; }
 
 /** Publications */
 .publication { margin-bottom: 60pt; text-align: start; }
@@ -181,7 +181,7 @@ table td { border: 1px solid #e8e8e8; }
 
 .logo { margin-top: 17pt; margin-left: 200pt; margin-bottom: 15pt; border-radius: 0%; -webkit-border-radius: 0%; -moz-border-radius: 0%; max-width: 220px; width: 100%; }
 
-.scrollable-sec { overflow-x: hidden; overflow-y: scroll; width: 550px; height: 600px; padding-right: 10px; }
+.scrollable-sec { overflow-x: hidden; overflow-y: scroll; width: 1050pt; height: 600pt; padding-right: 10pt; }
 
 .scrollable-sec::-webkit-scrollbar { width: 6px; height: 6px; }
 
