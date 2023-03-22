@@ -3,19 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Active Exploration for Neural Global Illumination of Variable Scenes | Stavros Diolatzis</title>
+<title>NeRFshop: Interactive Editing of Neural Radiance Fields | Stavros Diolatzis</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Active Exploration for Neural Global Illumination of Variable Scenes" />
+<meta property="og:title" content="NeRFshop: Interactive Editing of Neural Radiance Fields" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Authors" />
 <meta property="og:description" content="Authors" />
-<link rel="canonical" href="http://localhost:4000/publications/Active%20Exploration.html" />
-<meta property="og:url" content="http://localhost:4000/publications/Active%20Exploration.html" />
+<link rel="canonical" href="http://localhost:4000/publications/0NeRFshop.html" />
+<meta property="og:url" content="http://localhost:4000/publications/0NeRFshop.html" />
 <meta property="og:site_name" content="Stavros Diolatzis" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-03-22T20:25:00+02:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/publications/Active%20Exploration.html"},"url":"http://localhost:4000/publications/Active%20Exploration.html","headline":"Active Exploration for Neural Global Illumination of Variable Scenes","dateModified":"2023-03-22T20:25:00+02:00","description":"Authors","datePublished":"2023-03-22T20:25:00+02:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/publications/0NeRFshop.html"},"url":"http://localhost:4000/publications/0NeRFshop.html","headline":"NeRFshop: Interactive Editing of Neural Radiance Fields","dateModified":"2023-03-22T20:25:00+02:00","description":"Authors","datePublished":"2023-03-22T20:25:00+02:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <link rel="shortcut icon" type="image/png" href="http://localhost:4000/assets/favicon.png"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Stavros Diolatzis" /></head>
@@ -78,41 +78,44 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Active Exploration for Neural Global Illumination of Variable Scenes</h1>
+    <h1 class="post-title p-name" itemprop="name headline">NeRFshop: Interactive Editing of Neural Radiance Fields</h1>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <h1 id="authors">Authors</h1>
 
-<p><b><a href="https://sdiolatz.info">Stavros Diolatzis</a></b>, <a href="https://julienphilip.com/">Julien Philip</a>, <a href="http://www-sop.inria.fr/members/George.Drettakis/">George Drettakis</a></p>
+<p><a href="https://clementjambon.github.io/">Clément Jambon</a>, <a href="https://www.cg.tuwien.ac.at/staff/BernhardKerbl">Bernhard Kerbl</a>, <a href="https://grgkopanas.github.io/">Georgios Kopanas</a>, <b><a href="https://sdiolatz.info">Stavros Diolatzis</a></b>, <a href="https://julienphilip.com/">Julien Philip</a>, <a href="https://people.mpi-inf.mpg.de/~tleimkue/">Thomas Leimkühler</a>, <a href="http://www-sop.inria.fr/members/George.Drettakis/">George Drettakis</a></p>
 
 <p float="left">
-  <a href="http://www-sop.inria.fr/reves/Basilic/2022/DPD22/active-exploration.pdf"><img src="../assets/file.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Paper</span></a>
-  <a href="https://github.com/diolatzis/active-exploration"><img src="../assets/code.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Code</span></a>
-  <a href="https://repo-sam.inria.fr/fungraph/active-exploration/"><img src="../assets/supp.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Project Website</span></a>
+  <a href="http://www-sop.inria.fr/reves/Basilic/2023/JKKDLD23/nerfshop.pdf"><img src="../assets/file.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Paper</span></a>
+  <a href="https://github.com/graphdeco-inria/nerfshop"><img src="../assets/code.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Code</span></a>
+  <a href="https://repo-sam.inria.fr/fungraph/nerfshop/"><img src="../assets/supp.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Project Website</span></a>
 </p>
 
-<p><img src="http://www-sop.inria.fr/reves/Basilic/2022/DPD22/teaser.jpg" alt="Teaser" /></p>
+<p><img src="http://www-sop.inria.fr/reves/Basilic/2023/JKKDLD23/teaser.jpg" alt="Teaser" /></p>
 
 <h1 id="abstract">Abstract</h1>
 
-<div style="text-align: justify">Path tracing is now the standard method used to generate realistic imagery in many domains, e.g., film, special effects, architecture etc. Path guiding has recently emerged as a powerful strategy to counter the notoriously long computation times required to render such images. We present a practical path guiding algorithm that performs product sampling, i.e., samples proportional to the product of the bidirectional scattering distribution function (BSDF) and incoming radiance. We use a spatial‐directional subdivision to represent incoming radiance, and introduce the use of Linearly Transformed Cosines (LTCs) to represent the BSDF during path guiding, thus enabling efficient product sampling. Despite the computational efficiency of LTCs, several optimizations are needed to make our method cost effective. In particular, we show how we can use vectorization, precomputation, as well as strategies to optimize multiple importance sampling and Russian roulette to improve performance. We evaluate our method on several scenes, demonstrating consistent improvement in efficiency compared to previous work, especially in scenes with significant glossy inter‐reflection.</div>
-<p><br /></p>
+<div style="text-align: justify">Neural Radiance Fields (NeRFs) have revolutionized novel view synthesis for captured scenes, with recent methods allowing interactive free-viewpoint navigation and fast training for scene reconstruction. However, the implicit representations used by these methods — often including neural networks and complex encodings — make them difficult to edit. Some initial methods have been proposed, but they suffer from limited editing capabilities and/or from a lack of interactivity, and are thus unsuitable for interactive editing of captured scenes.
 
-<p><img src="https://gitlab.inria.fr/sdiolatz/active-exploration-neural-rendering-paper/uploads/c0f15873aa0e2977ba7ff08ec179b9b8/variations.png" alt="Variations" /></p>
+We tackle both limitations and introduce NeRFshop, a novel end-to-end method that allows users to interactively select and deform objects through cage-based transformations. NeRFshop provides fine scribble-based user control for the selection of regions or objects to edit, semi-automatic cage creation, and interactive volumetric manipulation of scene content thanks to our GPU-friendly two-level interpolation scheme. Further, we introduce a preliminary approach that reduces potential resulting artifacts of these transformations with a volumetric membrane interpolation technique inspired by Poisson image editing and provide a process that "distills" the edits into a standalone NeRF representation..</div>
+<p><br /></p>
 
 <h1 id="citation">Citation</h1>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Article{DPD22,
-  author       = "Diolatzis, Stavros and Philip, Julien and Drettakis, George",
-  title        = "Active Exploration for Neural Global Illumination of Variable Scenes",
-  journal      = "ACM Transactions on Graphics",
-  year         = "2022",
-  url          = "http://www-sop.inria.fr/reves/Basilic/2022/DPD22"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Article{JKKDLD23,
+  author       = "Jambon, Cl\'ement and Kerbl, Bernhard and Kopanas, Georgios and Diolatzis, Stavros and Leimk{\"u}hler, Thomas and Drettakis, George",
+  title        = "NeRFshop: Interactive Editing of Neural Radiance Fields",
+  journal      = "Proceedings of the ACM on Computer Graphics and Interactive Techniques",
+  number       = "1",
+  volume       = "6",
+  month        = "May",
+  year         = "2023",
+  url          = "http://www-sop.inria.fr/reves/Basilic/2023/JKKDLD23"
 }
 </code></pre></div></div>
 
-  </div><a class="u-url" href="/publications/Active%20Exploration.html" hidden></a>
+  </div><a class="u-url" href="/publications/0NeRFshop.html" hidden></a>
 </article>
 
       </div>
