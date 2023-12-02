@@ -13,9 +13,9 @@
 <meta property="og:url" content="http://localhost:4000/publications/Active%20Exploration.html" />
 <meta property="og:site_name" content="Stavros Diolatzis" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-05-29T11:17:54+03:00" />
+<meta property="article:published_time" content="2023-12-02T14:09:51+02:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/publications/Active%20Exploration.html"},"url":"http://localhost:4000/publications/Active%20Exploration.html","headline":"Active Exploration for Neural Global Illumination of Variable Scenes","dateModified":"2023-05-29T11:17:54+03:00","datePublished":"2023-05-29T11:17:54+03:00","description":"Authors","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/publications/Active%20Exploration.html"},"url":"http://localhost:4000/publications/Active%20Exploration.html","headline":"Active Exploration for Neural Global Illumination of Variable Scenes","dateModified":"2023-12-02T14:09:51+02:00","datePublished":"2023-12-02T14:09:51+02:00","description":"Authors","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <link rel="shortcut icon" type="image/png" href="http://localhost:4000/assets/favicon.png"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Stavros Diolatzis" /></head>
@@ -96,10 +96,12 @@
 
 <h1 id="abstract">Abstract</h1>
 
-<div style="text-align: justify">Path tracing is now the standard method used to generate realistic imagery in many domains, e.g., film, special effects, architecture etc. Path guiding has recently emerged as a powerful strategy to counter the notoriously long computation times required to render such images. We present a practical path guiding algorithm that performs product sampling, i.e., samples proportional to the product of the bidirectional scattering distribution function (BSDF) and incoming radiance. We use a spatial‐directional subdivision to represent incoming radiance, and introduce the use of Linearly Transformed Cosines (LTCs) to represent the BSDF during path guiding, thus enabling efficient product sampling. Despite the computational efficiency of LTCs, several optimizations are needed to make our method cost effective. In particular, we show how we can use vectorization, precomputation, as well as strategies to optimize multiple importance sampling and Russian roulette to improve performance. We evaluate our method on several scenes, demonstrating consistent improvement in efficiency compared to previous work, especially in scenes with significant glossy inter‐reflection.</div>
-<p><br /></p>
+<div style="text-align: justify">Neural rendering algorithms introduce a fundamentally new approach for photorealistic rendering, typically by learning a neural representation of illumination on large numbers of ground truth images. When training for a given variable scene, i.e., changing objects, materials, lights and viewpoint, the space D of possible training data instances quickly becomes unmanageable as the dimensions of variable parameters increase.
 
-<p><img src="https://gitlab.inria.fr/sdiolatz/active-exploration-neural-rendering-paper/uploads/c0f15873aa0e2977ba7ff08ec179b9b8/variations.png" alt="Variations" /></p>
+We introduce a novel Active Exploration method using Markov Chain Monte Carlo, which explores D , generating samples (i.e., ground truth renderings) that best help training and interleaves training and on-the-fly sample data generation. We introduce a self-tuning sample reuse strategy to minimize the expensive step of rendering training samples. We apply our approach on a neural generator that learns to render novel scene instances given an explicit parameterization of the scene configuration.
+
+Our results show that Active Exploration trains our network much more efficiently than uniformly sampling, and together with our resolution enhancement approach, achieves better quality than uniform sampling at convergence. Our method allows interactive rendering of hard light transport paths (e.g., complex caustics) – that require very high samples counts to be captured – and provides dynamic scene navigation and manipulation, after training for 5-18 hours depending on required quality and variations.</div>
+<p><br /></p>
 
 <h1 id="citation">Citation</h1>
 
