@@ -3,19 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Active Exploration for Neural Global Illumination of Variable Scenes | Stavros Diolatzis</title>
+<title>Image-GS: Content-Adaptive Image Representation via 2D Gaussians | Stavros Diolatzis</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Active Exploration for Neural Global Illumination of Variable Scenes" />
+<meta property="og:title" content="Image-GS: Content-Adaptive Image Representation via 2D Gaussians" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Authors" />
 <meta property="og:description" content="Authors" />
-<link rel="canonical" href="http://localhost:4000/publications/Active%20Exploration.html" />
-<meta property="og:url" content="http://localhost:4000/publications/Active%20Exploration.html" />
+<link rel="canonical" href="http://localhost:4000/publications/00ImageGS.html" />
+<meta property="og:url" content="http://localhost:4000/publications/00ImageGS.html" />
 <meta property="og:site_name" content="Stavros Diolatzis" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-07-09T11:44:48+03:00" />
 <script type="application/ld+json">
-{"headline":"Active Exploration for Neural Global Illumination of Variable Scenes","dateModified":"2025-07-09T11:44:48+03:00","datePublished":"2025-07-09T11:44:48+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/publications/Active%20Exploration.html"},"url":"http://localhost:4000/publications/Active%20Exploration.html","description":"Authors","@context":"https://schema.org"}</script>
+{"headline":"Image-GS: Content-Adaptive Image Representation via 2D Gaussians","dateModified":"2025-07-09T11:44:48+03:00","datePublished":"2025-07-09T11:44:48+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/publications/00ImageGS.html"},"url":"http://localhost:4000/publications/00ImageGS.html","description":"Authors","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <link rel="shortcut icon" type="image/png" href="http://localhost:4000/assets/favicon.png"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Stavros Diolatzis" /></head>
@@ -72,43 +72,40 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Active Exploration for Neural Global Illumination of Variable Scenes</h1>
+    <h1 class="post-title p-name" itemprop="name headline">Image-GS: Content-Adaptive Image Representation via 2D Gaussians</h1>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <h1 id="authors">Authors</h1>
 
-<p><b><a href="https://sdiolatz.info">Stavros Diolatzis</a></b>, <a href="https://julienphilip.com/">Julien Philip</a>, <a href="http://www-sop.inria.fr/members/George.Drettakis/">George Drettakis</a></p>
+<p><a href="https://yunxiangzhang.github.io/">Yunxiang Zhang*</a>, <a href="https://bingxuan-li.github.io/">Bingxuan Li*</a>,
+                  <a href="https://www.alexku.me/">Alexandr Kuznetsov</a>,
+                  <a href="https://www.akshayjindal.com/">Akshay Jindal</a>,
+                  <b><a href="https://www.sdiolatz.info/">Stavros Diolatzis</a></b>,
+                  <a href="https://kenchen10.github.io">Kenneth Chen</a>,
+                  <a href="https://www.intel.com/content/www/us/en/developer/articles/community/gpu-researchers-anton-sochenov.html">Anton Sochenov</a>,
+                  <a href="http://kaplanyan.com/">Anton Kaplanyan</a>,
+                  <a href="https://qisun.me">Qi Sun</a></p>
 
-<p float="left">
-  <a href="http://www-sop.inria.fr/reves/Basilic/2022/DPD22/active-exploration.pdf"><img src="../assets/file.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Paper</span></a>
-  <a href="https://github.com/diolatzis/active-exploration"><img src="../assets/code.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Code</span></a>
-  <a href="https://repo-sam.inria.fr/fungraph/active-exploration/"><img src="../assets/supp.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Project Website</span></a>
+<p float="left"> 
+	<a href="https://arxiv.org/pdf/2407.01866"><img src="../assets/file.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Paper</span></a>
 </p>
 
-<p><img src="http://www-sop.inria.fr/reves/Basilic/2022/DPD22/teaser.jpg" alt="Teaser" /></p>
+<p><img src="https://raw.githubusercontent.com/diolatzis/image-gs-website/refs/heads/master/media/teaser.png" alt="Teaser" /></p>
+
+<h1 id="video">Video</h1>
+
+<video src="https://github.com/diolatzis/image-gs-website/raw/master/media/overview_comp.mp4" controls="" width="100%"></video>
 
 <h1 id="abstract">Abstract</h1>
 
-<div style="text-align: justify">Neural rendering algorithms introduce a fundamentally new approach for photorealistic rendering, typically by learning a neural representation of illumination on large numbers of ground truth images. When training for a given variable scene, i.e., changing objects, materials, lights and viewpoint, the space D of possible training data instances quickly becomes unmanageable as the dimensions of variable parameters increase.
-
-We introduce a novel Active Exploration method using Markov Chain Monte Carlo, which explores D , generating samples (i.e., ground truth renderings) that best help training and interleaves training and on-the-fly sample data generation. We introduce a self-tuning sample reuse strategy to minimize the expensive step of rendering training samples. We apply our approach on a neural generator that learns to render novel scene instances given an explicit parameterization of the scene configuration.
-
-Our results show that Active Exploration trains our network much more efficiently than uniformly sampling, and together with our resolution enhancement approach, achieves better quality than uniform sampling at convergence. Our method allows interactive rendering of hard light transport paths (e.g., complex caustics) – that require very high samples counts to be captured – and provides dynamic scene navigation and manipulation, after training for 5-18 hours depending on required quality and variations.</div>
+<div style="text-align: justify">Neural image representations have emerged as a promising approach for encoding and rendering visual data. Combined with learning-based workflows, they demonstrate impressive trade-offs between visual fidelity and memory footprint. Existing methods in this domain, however, often rely on fixed data structures that suboptimally allocate memory or compute-intensive implicit models, hindering their practicality for real-time graphics applications.
+Inspired by recent advancements in radiance field rendering, we introduce Image-GS, a content-adaptive image representation based on 2D Gaussians. Leveraging a custom differentiable renderer, Image-GS reconstructs images by adaptively allocating and progressively optimizing a group of anisotropic, colored 2D Gaussians. It achieves a favorable balance between visual fidelity and memory efficiency across a variety of stylized images frequently seen in graphics workflows, especially for those showing non-uniformly distributed features and in low-bitrate regimes. Moreover, it supports hardware-friendly rapid random access for real-time usage, requiring only 0.3K MACs to decode a pixel. Through error-guided progressive optimization, Image-GS naturally constructs a smooth level-of-detail hierarchy. We demonstrate its versatility with several applications, including texture compression, semantics-aware compression, and joint image compression and restoration.</div>
 <p><br /></p>
 
-<h1 id="citation">Citation</h1>
+<p><img src="https://raw.githubusercontent.com/diolatzis/image-gs-website/refs/heads/master/media/overview.png" alt="Overview" /></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Article{DPD22,
-  author       = "Diolatzis, Stavros and Philip, Julien and Drettakis, George",
-  title        = "Active Exploration for Neural Global Illumination of Variable Scenes",
-  journal      = "ACM Transactions on Graphics",
-  year         = "2022",
-  url          = "http://www-sop.inria.fr/reves/Basilic/2022/DPD22"
-}
-</code></pre></div></div>
-
-  </div><a class="u-url" href="/publications/Active%20Exploration.html" hidden></a>
+  </div><a class="u-url" href="/publications/00ImageGS.html" hidden></a>
 </article>
 
       </div>

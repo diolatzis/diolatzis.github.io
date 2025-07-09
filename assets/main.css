@@ -135,7 +135,7 @@ table td { border: 1px solid #e8e8e8; }
 /** Posts */
 .post-header { margin-bottom: 30px; }
 
-.post-title { font-size: 21.2px; letter-spacing: -1px; line-height: 1; margin-bottom: 20px; margin-top: 40px; }
+.post-title { font-size: 32px; letter-spacing: -1px; line-height: 1; margin-bottom: 10px; margin-top: 40px; }
 
 @media screen and (max-width: 800px) { .post-title { font-size: 18.4px; } }
 
