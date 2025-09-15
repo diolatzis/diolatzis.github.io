@@ -3,19 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>NeRFshop: Interactive Editing of Neural Radiance Fields | Stavros Diolatzis</title>
+<title>MesoGAN: Generative Neural Reflectance Shells | Stavros Diolatzis</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="NeRFshop: Interactive Editing of Neural Radiance Fields" />
+<meta property="og:title" content="MesoGAN: Generative Neural Reflectance Shells" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Authors" />
 <meta property="og:description" content="Authors" />
-<link rel="canonical" href="http://localhost:4000/publications/3NeRFshop.html" />
-<meta property="og:url" content="http://localhost:4000/publications/3NeRFshop.html" />
+<link rel="canonical" href="http://localhost:4000/publications/MesoGAN.html" />
+<meta property="og:url" content="http://localhost:4000/publications/MesoGAN.html" />
 <meta property="og:site_name" content="Stavros Diolatzis" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-09-15T12:40:51+03:00" />
+<meta property="article:published_time" content="2023-06-01T00:00:00+03:00" />
 <script type="application/ld+json">
-{"headline":"NeRFshop: Interactive Editing of Neural Radiance Fields","dateModified":"2025-09-15T12:40:51+03:00","datePublished":"2025-09-15T12:40:51+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/publications/3NeRFshop.html"},"url":"http://localhost:4000/publications/3NeRFshop.html","description":"Authors","@context":"https://schema.org"}</script>
+{"headline":"MesoGAN: Generative Neural Reflectance Shells","dateModified":"2023-06-01T00:00:00+03:00","datePublished":"2023-06-01T00:00:00+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/publications/MesoGAN.html"},"url":"http://localhost:4000/publications/MesoGAN.html","description":"Authors","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
   <link rel="shortcut icon" type="image/png" href="http://localhost:4000/assets/favicon.png"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Stavros Diolatzis" /></head>
@@ -72,44 +72,43 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">NeRFshop: Interactive Editing of Neural Radiance Fields</h1>
+    <h1 class="post-title p-name" itemprop="name headline">MesoGAN: Generative Neural Reflectance Shells</h1>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <h1 id="authors">Authors</h1>
 
-<p><a href="https://clementjambon.github.io/">Clément Jambon</a>, <a href="https://www.cg.tuwien.ac.at/staff/BernhardKerbl">Bernhard Kerbl</a>, <a href="https://grgkopanas.github.io/">Georgios Kopanas</a>, <b><a href="https://sdiolatz.info">Stavros Diolatzis</a></b>, <a href="https://people.mpi-inf.mpg.de/~tleimkue/">Thomas Leimkühler</a>, <a href="http://www-sop.inria.fr/members/George.Drettakis/">George Drettakis</a></p>
-
+<p><b><a href="https://sdiolatz.info">Stavros Diolatzis</a></b>, <a href="https://jannovak.info/">Jan Novák</a>, <a href="https://research.nvidia.com/person/fabrice-rousselle">Fabrice Rouselle</a>, <a href="http://granskog.xyz/">Jonathan Granskog</a>, <a href="https://research.nvidia.com/person/miika-aittala">Miika Aittala</a>, <a href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a>, <a href="http://www-sop.inria.fr/members/George.Drettakis/">George Drettakis</a></p>
 <p float="left">
-  <a href="http://www-sop.inria.fr/reves/Basilic/2023/JKKDLD23/nerfshop.pdf"><img src="../assets/file.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Paper</span></a>
-  <a href="https://github.com/graphdeco-inria/nerfshop"><img src="../assets/code.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Code</span></a>
-  <a href="https://repo-sam.inria.fr/fungraph/nerfshop/"><img src="../assets/supp.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Project Website</span></a>
+  <a href="http://www-sop.inria.fr/reves/Basilic/2023/DNRGARD23/mesogan_authors.pdf"><img src="../assets/file.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Paper</span></a>
+  <a href="https://repo-sam.inria.fr/fungraph/mesogan/"><img src="../assets/supp.png" width="30" style="vertical-align:middle;margin:0px 5pt 0px" /><span>Project Website</span></a>
 </p>
 
-<p><img src="http://www-sop.inria.fr/reves/Basilic/2023/JKKDLD23/teaser.jpg" alt="Teaser" /></p>
+<p><img src="https://repo-sam.inria.fr/fungraph/mesogan/static/resources/teaser.png" alt="Teaser" /></p>
 
 <h1 id="abstract">Abstract</h1>
 
-<div style="text-align: justify">Neural Radiance Fields (NeRFs) have revolutionized novel view synthesis for captured scenes, with recent methods allowing interactive free-viewpoint navigation and fast training for scene reconstruction. However, the implicit representations used by these methods — often including neural networks and complex encodings — make them difficult to edit. Some initial methods have been proposed, but they suffer from limited editing capabilities and/or from a lack of interactivity, and are thus unsuitable for interactive editing of captured scenes.
+<div style="text-align: justify">We introduce MesoGAN, a model for generative 3D neural textures. This new graphics primitive represents mesoscale appearance by combining the strengths of generative adversarial networks (StyleGAN) and volumetric neural field rendering.
 
-We tackle both limitations and introduce NeRFshop, a novel end-to-end method that allows users to interactively select and deform objects through cage-based transformations. NeRFshop provides fine scribble-based user control for the selection of regions or objects to edit, semi-automatic cage creation, and interactive volumetric manipulation of scene content thanks to our GPU-friendly two-level interpolation scheme. Further, we introduce a preliminary approach that reduces potential resulting artifacts of these transformations with a volumetric membrane interpolation technique inspired by Poisson image editing and provide a process that "distills" the edits into a standalone NeRF representation..</div>
+The primitive can be applied to surfaces as a neural reflectance shell; a thin volumetric layer above the surface with appearance parameters defined by a neural network. To construct the neural shell, we first generate a 2D feature texture using StyleGAN with carefully randomized Fourier features to support arbitrarily sized textures without repeating artifacts.
+
+We augment the 2D feature texture with a learned height feature, which aids the neural field renderer in producing volumetric parameters from the 2D texture. To facilitate filtering, and to enable end-to-end training within memory constraints of current hardware, we utilize a hierarchical texturing approach and train our model on multi-scale synthetic datasets of 3D mesoscale structures.
+
+We propose one possible approach for conditioning MesoGAN on artistic parameters (e.g., fiber length, density of strands, lighting direction) and demonstrate and discuss integration into physically based renderers.</div>
 <p><br /></p>
 
 <h1 id="citation">Citation</h1>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Article{JKKDLD23,
-  author       = "Jambon, Cl\'ement and Kerbl, Bernhard and Kopanas, Georgios and Diolatzis, Stavros and Leimk{\"u}hler, Thomas and Drettakis, George",
-  title        = "NeRFshop: Interactive Editing of Neural Radiance Fields",
-  journal      = "Proceedings of the ACM on Computer Graphics and Interactive Techniques",
-  number       = "1",
-  volume       = "6",
-  month        = "May",
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@Article{DNRGARD23,
+  author       = "Diolatzis, Stavros and Novak, Jan and Rousselle, Fabrice and Granskog, Jonathan and Aittala, Miika and Ramamoorthi, Ravi and Drettakis, George",
+  title        = "MesoGAN: Generative Neural Reflectance Shells",
+  journal      = "Computer Graphics Forum",
   year         = "2023",
-  url          = "http://www-sop.inria.fr/reves/Basilic/2023/JKKDLD23"
+  url          = "http://www-sop.inria.fr/reves/Basilic/2023/DNRGARD23"
 }
 </code></pre></div></div>
 
-  </div><a class="u-url" href="/publications/3NeRFshop.html" hidden></a>
+  </div><a class="u-url" href="/publications/MesoGAN.html" hidden></a>
 </article>
 
       </div>
