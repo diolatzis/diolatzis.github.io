@@ -1,1 +1,1 @@
-Sitemap: https://www.sdiolatz.info/sitemap.xml
+Sitemap: https://sdiolatz.info/sitemap.xml
